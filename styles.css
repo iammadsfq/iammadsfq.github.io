@@ -218,38 +218,7 @@ nav .right a.email-link:hover {
   font-size: 16px;
 }
 
-.contact-section .group form {
-  flex: 1.5;
-  display: flex;
-  flex-direction: column;
-}
-
-.contact-section .group form label {
-  margin-bottom: 5px;
-  font-weight: 600;
-  font-size: 14px;
-}
-
-.contact-section .group form input,
-.contact-section .group form textarea {
-  font-family: 'Poppins', sans-serif;
-  background-color: var(--background-color);
-  border: 1px solid var(--border-color);
-  padding: 15px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  outline: none;
-  resize: vertical;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-.contact-section .group form input:focus,
-.contact-section .group form textarea:focus {
-  border-color: var(--primary-color);
-  box-shadow: 0 0 0 3px var(--shadow-color);
-}
-
-.contact-section .group form button {
+.contact-section .group tombol-email {
   font-size: 16px;
   font-weight: 600;
   font-family: 'Poppins', sans-serif;
@@ -261,13 +230,6 @@ nav .right a.email-link:hover {
   cursor: pointer;
   transition: all 0.2s ease;
 }
-
-.contact-section .group form button:hover {
-  background-color: #6CB4EE;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px var(--shadow-color);
-}
-
 
   /* ANIMATION: TYPEWRITER EFFECT */
 .typing-effect {
