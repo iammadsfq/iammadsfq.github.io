@@ -1,0 +1,367 @@
+:root {
+  --primary-color: #89CFF0; /* Baby Blue */
+  --secondary-color: #E0F7FA; /* Light Cyan */
+  --background-color: #FFFFFF;
+  --text-color: #334155; /* Dark Slate */
+  --text-light: #64748B;
+  --shadow-color: rgba(137, 207, 240, 0.25);
+  --border-color: #E2E8F0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #6CB4EE; /* Slightly darker blue */
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+}
+
+nav .left a {
+  color: var(--text-color);
+  font-size: 24px;
+  font-weight: 600;
+}
+
+nav .right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+nav .right a {
+  color: var(--text-light);
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+nav .right a.email-link {
+  color: var(--background-color);
+  background-color: var(--primary-color);
+  padding: 10px 20px;
+  border-radius: 50px; /* Pill shape */
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+nav .right a.email-link:hover {
+  background-color: #6CB4EE;
+  color: var(--background-color);
+}
+
+/* SECTION 1: Hero */
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 0;
+  margin-bottom: 80px;
+  gap: 50px;
+}
+
+.hero-section .text {
+  flex: 3;
+}
+
+.hero-section .text h2 {
+  font-size: 52px;
+  text-align: left;
+  line-height: 1.2;
+}
+
+.hero-section .text p {
+  font-size: 18px;
+  color: var(--text-light);
+  margin-bottom: 30px;
+  max-width: 500px;
+}
+
+.hero-section .text .links a {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 25px;
+  border-radius: 50px;
+  margin-right: 15px;
+  transition: all 0.2s ease;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.hero-section .text .links a:hover {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px var(--shadow-color);
+}
+
+.hero-section .headshot {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-section .headshot img {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid var(--background-color);
+  box-shadow: 0 10px 30px var(--shadow-color);
+}
+
+/* SECTION 2: Skills */
+.skills-section {
+  padding: 50px 0;
+  margin-bottom: 80px;
+}
+
+.skills-section .subtitle {
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--text-light);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.skills-section .cells {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.skills-section .cells .cell {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: var(--background-color);
+  padding: 15px 30px;
+  border-radius: 15px;
+  border: 1px solid var(--border-color);
+  transition: all 0.2s ease-in-out;
+}
+
+.skills-section .cells .cell:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px var(--shadow-color);
+  border-color: var(--primary-color);
+}
+
+.skills-section .cells .cell img {
+  width: 35px;
+  height: 35px;
+}
+
+.skills-section .cells .cell span {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* SECTION 3: Contact */
+.contact-section {
+  padding: 50px 0;
+  margin-bottom: 80px;
+}
+
+.contact-section .group {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  background-color: var(--secondary-color);
+  padding: 50px;
+  border-radius: 20px;
+}
+
+.contact-section .group .text {
+  flex: 1;
+  color: var(--text-light);
+  font-size: 16px;
+}
+
+.contact-section .group form {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-section .group form label {
+  margin-bottom: 5px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.contact-section .group form input,
+.contact-section .group form textarea {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background-color);
+  border: 1px solid var(--border-color);
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  outline: none;
+  resize: vertical;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-section .group form input:focus,
+.contact-section .group form textarea:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px var(--shadow-color);
+}
+
+.contact-section .group form button {
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  background-color: var(--primary-color);
+  border: none;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.contact-section .group form button:hover {
+  background-color: #6CB4EE;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px var(--shadow-color);
+}
+
+
+  /* ANIMATION: TYPEWRITER EFFECT */
+.typing-effect {
+  display: inline-block; /* Membuat elemen pas dengan teksnya */
+  overflow: hidden; /* Menyembunyikan teks yang belum "diketik" */
+  white-space: nowrap; /* Mencegah teks turun ke baris baru */
+  border-right: .15em solid var(--primary-color); /* Ini adalah kursor ketik */
+  letter-spacing: .0em;
+  animation: 
+    typing 2.5s steps(15, end) forwards,
+    blink-caret .75s step-end infinite;
+}
+
+/* Keyframes untuk animasi mengetik */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 56% }
+}
+
+/* Keyframes untuk membuat kursor berkedip */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: var(--primary-color); }
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 992px) {
+  .hero-section {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .hero-section .text h2 {
+    text-align: center;
+  }
+  .hero-section .text p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 32px;
+  }
+  
+  .hero-section .text h2 {
+    font-size: 42px;
+  }
+
+  .hero-section .headshot img {
+    width: 280px;
+    height: 280px;
+  }
+
+  .contact-section .group {
+    flex-direction: column;
+    padding: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  nav {
+    padding: 0;
+  }
+
+  nav .right a span {
+    display: none;
+  }
+
+  nav .right a.email-link {
+    padding: 12px;
+    border-radius: 50%;
+  }
+
+  .hero-section {
+    margin-bottom: 50px;
+  }
+  
+  .hero-section .text h2 {
+    font-size: 36px;
+  }
+  
+  .hero-section .text p {
+    font-size: 16px;
+  }
+
+  .hero-section .text .links a {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .skills-section .cells .cell {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
